@@ -1,0 +1,34 @@
+/* Navbar.css */
+.navbar {
+    background-color: #3498db;
+    padding: 10px 20px;
+  }
+  
+  .navbar-brand img {
+    margin-right: 10px;
+  }
+  
+  .nav-link {
+    color: white;
+  }
+
+  
+.nav-item {
+    margin-right: 10px; 
+  }
+  
+  .separator {
+    margin: 0 5px; 
+    color: #ccc; 
+  }
+  
+  
+  .nav-link:hover {
+    color: #f1c40f;
+  }
+
+  .navbar-nav a {
+    text-decoration: none;
+    color: grey;
+  }
+  

@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/navbar';
+import LeftMenu from './components/leftMenu';
+import MainContent from './components/mainContent';
+import Documents from './components/documents'; // Import Documents component
+import Factilities from './components/factilities'; // Import Factilities component
+import Insurance from './components/insurance'; // Import Insurance component
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="container-fluid">
+        <Navbar />
+        <div className="row">
+          <div className="col-lg-2">
+            <LeftMenu />
+          </div>
+          <div className="col-lg-10">
+            <Routes>
+              <Route path="/" element={<MainContent />} />
+              <Route path="/documents" element={<Documents />} />
+              <Route path="/factilities" element={<Factilities />} />
+              <Route path="/insurance" element={<Insurance />} />
+            </Routes>
+          </div>
+        </div>
+      </div>
+    </Router>
   );
 }
 

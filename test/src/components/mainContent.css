@@ -1,0 +1,17 @@
+/* MainContent.css */
+.main-content {
+    padding: 20px;
+    min-height: 100vh;
+  }
+  
+  /* Example content styles */
+  .content-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .content-text {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
