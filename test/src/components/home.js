@@ -1,8 +1,8 @@
-// MainContent.js
+// Home.js
 import React from 'react';
 import HospitalForm from './hospitalForm';
 
-const MainContent = () => {
+const Home = () => {
   return (
     <div>
       {}
@@ -12,4 +12,4 @@ const MainContent = () => {
   );
 };
 
-export default MainContent;
+export default Home;

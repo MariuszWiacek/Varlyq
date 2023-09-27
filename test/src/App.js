@@ -3,9 +3,9 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/navbar';
 import LeftMenu from './components/leftMenu';
-import MainContent from './components/mainContent';
+import MainContent from './components/home';
 import Documents from './components/documents'; // Import Documents component
-import Factilities from './components/factilities'; // Import Factilities component
+import Factilities from './components/documentUpload'; // Import Factilities component
 import Insurance from './components/insurance'; // Import Insurance component
 
 function App() {
