@@ -19,7 +19,7 @@ const Documents = () => {
       <form>
         <div className="row">
           {/* Column 1 */}
-          <div className="form-group col-md-3">
+          <div className="form-group col-md-4">
             <label htmlFor="hospitalName">Hospital Name</label>
             <input
               type="text"
@@ -29,7 +29,7 @@ const Documents = () => {
               onChange={(e) => setHospitalName(e.target.value)}
             />
           </div>
-          <div className="form-group col-md-3">
+          <div className="form-group col-md-4">
             <label htmlFor="mobile">Mobile</label>
             <input
               type="text"
@@ -39,7 +39,7 @@ const Documents = () => {
               onChange={(e) => setMobile(e.target.value)}
             />
           </div>
-          <div className="form-group col-md-3">
+          <div className="form-group col-md-4">
             <label htmlFor="website">Website</label>
             <input
               type="text"
@@ -49,9 +49,11 @@ const Documents = () => {
               onChange={(e) => setWebsite(e.target.value)}
             />
           </div>
-          
+        </div>
+
+        <div className="row">
           {/* Column 2 */}
-          <div className="form-group col-md-3">
+          <div className="form-group col-md-4">
             <label htmlFor="addressLine1">Address Line 1</label>
             <input
               type="text"
@@ -61,7 +63,7 @@ const Documents = () => {
               onChange={(e) => setAddressLine1(e.target.value)}
             />
           </div>
-          <div className="form-group col-md-3">
+          <div className="form-group col-md-4">
             <label htmlFor="addressLine2">Address Line 2</label>
             <input
               type="text"
@@ -71,7 +73,7 @@ const Documents = () => {
               onChange={(e) => setAddressLine2(e.target.value)}
             />
           </div>
-          <div className="form-group col-md-3">
+          <div className="form-group col-md-4">
             <label htmlFor="addressLine3">Address Line 3</label>
             <input
               type="text"
@@ -81,9 +83,11 @@ const Documents = () => {
               onChange={(e) => setAddressLine3(e.target.value)}
             />
           </div>
+        </div>
 
+        <div className="row">
           {/* Column 3 */}
-          <div className="form-group col-md-3">
+          <div className="form-group col-md-4">
             <label htmlFor="name">Name</label>
             <input
               type="text"
@@ -93,7 +97,7 @@ const Documents = () => {
               onChange={(e) => setName(e.target.value)}
             />
           </div>
-          <div className="form-group col-md-3">
+          <div className="form-group col-md-4">
             <label htmlFor="designation">Designation</label>
             <input
               type="text"
@@ -103,7 +107,7 @@ const Documents = () => {
               onChange={(e) => setDesignation(e.target.value)}
             />
           </div>
-          <div className="form-group col-md-3">
+          <div className="form-group col-md-4">
             <label htmlFor="contact">Contact</label>
             <input
               type="text"
@@ -113,12 +117,8 @@ const Documents = () => {
               onChange={(e) => setContact(e.target.value)}
             />
           </div>
-          
-          {/* Column 4 */}
-          <div className="form-group col-md-3">
-            {/* Add fields for Column 4 here */}
-          </div>
         </div>
+
         <button type="submit" className="btn btn-primary">
           Save and exit
         </button>

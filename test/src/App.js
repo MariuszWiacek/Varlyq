@@ -3,10 +3,9 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/navbar';
 import LeftMenu from './components/leftMenu';
-import MainContent from './components/home';
-import Documents from './components/documents'; // Import Documents component
-import Factilities from './components/documentUpload'; // Import Factilities component
-import Insurance from './components/insurance'; // Import Insurance component
+import Documents from './components/documents';
+import Factilities from './components/documentUpload';
+import Insurance from './components/insurance';
 
 function App() {
   return (
@@ -19,7 +18,8 @@ function App() {
           </div>
           <div className="col-lg-10">
             <Routes>
-              <Route path="/" element={<MainContent />} />
+              {/* Set the "documents" page as the default (starting) page */}
+              <Route path="/" element={<Documents />} />
               <Route path="/documents" element={<Documents />} />
               <Route path="/factilities" element={<Factilities />} />
               <Route path="/insurance" element={<Insurance />} />

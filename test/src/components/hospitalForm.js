@@ -1,5 +1,6 @@
 // HospitalForm.js
 import React, { useState } from 'react';
+import './leftMenu.css';
 
 const HospitalForm = () => {
   // State variables to store form data
@@ -11,9 +12,9 @@ const HospitalForm = () => {
   const [addressLine3, setAddressLine3] = useState('');
 
   return (
-    <div>
+    <div id="form">
       <h1>Hospital</h1>
-      <form>
+      <form >
         {/* Row 1 */}
         <div className="form-row">
           {/* Hospital Name */}
