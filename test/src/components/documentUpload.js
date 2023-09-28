@@ -1,5 +1,7 @@
 // DocumentUpload.js
 import React, { useState } from 'react';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 const DocumentUpload = () => {
   // State variables to store form data
@@ -15,6 +17,10 @@ const DocumentUpload = () => {
   const [ownerDoctor2, setOwnerDoctor2] = useState('');
   const [ownerDoctor3, setOwnerDoctor3] = useState('');
   const [ownerDoctor4, setOwnerDoctor4] = useState('');
+
+  const handleDateChange = (date) => {
+    setOwnerDoctor2(date);
+  };
 
   return (
     <div>
@@ -68,7 +74,7 @@ const DocumentUpload = () => {
           <div className="col-md-4"><br></br>
             <p>Hospital Registration</p>
             <div className="form-group">
-              <label htmlFor="hospitalReg1">Registration Field 1</label>
+              <label htmlFor="hospitalReg1">Certificate Number</label>
               <input
                 type="text"
                 className="form-control"
@@ -78,17 +84,17 @@ const DocumentUpload = () => {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="hospitalReg2">Registration Field 2</label>
-              <input
-                type="text"
+              <label htmlFor="ownerDoctor2">Date of joining</label><br></br>
+              <DatePicker
+                selected={ownerDoctor2} // Pass the selected date
+                onChange={handleDateChange} // Handle date change
                 className="form-control"
-                id="hospitalReg2"
-                value={hospitalReg2}
-                onChange={(e) => setHospitalReg2(e.target.value)}
+                id="ownerDoctor2"
+                dateFormat="dd/MM/yyyy" // Customize date format if needed
               />
             </div>
             <div className="form-group">
-              <label htmlFor="hospitalReg3">Registration Field 3</label>
+              <label htmlFor="hospitalReg3">Upload Certificate</label>
               <input
                 type="text"
                 className="form-control"
@@ -99,11 +105,31 @@ const DocumentUpload = () => {
             </div>
           </div>
         </div>
-
+<br></br>
         {/* Owner Doctor Section */}
         <div className="row">
           <div className="col-md-4">
             <p>Owner Doctor</p><br></br>
+            <div className="form-group">
+              <label htmlFor="ownerDoctor1">Upload Certificates</label>
+              <input
+                type="text"
+                className="form-control"
+                id="ownerDoctor1"
+                value={ownerDoctor1}
+                onChange={(e) => setOwnerDoctor1(e.target.value)}
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="ownerDoctor1">Name</label>
+              <input
+                type="text"
+                className="form-control"
+                id="ownerDoctor1"
+                value={ownerDoctor1}
+                onChange={(e) => setOwnerDoctor1(e.target.value)}
+              />
+            </div>
             <div className="form-group">
               <label htmlFor="ownerDoctor1">Certificate Number</label>
               <input
@@ -114,39 +140,17 @@ const DocumentUpload = () => {
                 onChange={(e) => setOwnerDoctor1(e.target.value)}
               />
             </div>
-            <div className="form-group">
-              <label htmlFor="ownerDoctor2">Date of joining</label>
-              <input
-                type="text"
-                className="form-control"
-                id="ownerDoctor2"
-                value={ownerDoctor2}
-                onChange={(e) => setOwnerDoctor2(e.target.value)}
-              />
-            </div>
           </div>
-          <div className="col-md-4">
-            <div className="form-group">
-              <label htmlFor="ownerDoctor3">Upload Certification</label>
+          <div className="form-group">
+              <label htmlFor="ownerDoctor1">Specialization</label>
               <input
                 type="text"
                 className="form-control"
-                id="ownerDoctor3"
-                value={ownerDoctor3}
-                onChange={(e) => setOwnerDoctor3(e.target.value)}
+                id="ownerDoctor1"
+                value={ownerDoctor1}
+                onChange={(e) => setOwnerDoctor1(e.target.value)}
               />
             </div>
-            <div className="form-group">
-              <label htmlFor="ownerDoctor4">Doctor Field 4</label>
-              <input
-                type="text"
-                className="form-control"
-                id="ownerDoctor4"
-                value={ownerDoctor4}
-                onChange={(e) => setOwnerDoctor4(e.target.value)}
-              />
-            </div>
-          </div>
         </div>
 
         <button type="submit" className="btn btn-primary">
